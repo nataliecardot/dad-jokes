@@ -49,29 +49,32 @@ class App extends Component {
 
   // Default parameter
   searchJokes(limit = 15) {
-    this.setState({
-      isFetchingJokes: true,
-      isSearch: true
-    });
-
-    fetch(
-      `https://icanhazdadjoke.com/search?term=${
-        this.state.searchTerm
-      }&limit=${limit}`,
-      {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json'
-        }
-    })
-      .then(response => response.json())
-      .then(json => {
-        let jokes = json.results;
-        this.setState({
-          jokes,
-          isFetchingJokes: false
-        });
+    // If nothing entered, user gets "Please fill out this field" message due to "required" attribute on input element
+    if (this.state.searchTerm !== '') {
+      this.setState({
+        isFetchingJokes: true,
+        isSearch: true
       });
+
+      fetch(
+        `https://icanhazdadjoke.com/search?term=${
+          this.state.searchTerm
+        }&limit=${limit}`,
+        {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json'
+          }
+      })
+        .then(response => response.json())
+        .then(json => {
+          let jokes = json.results;
+          this.setState({
+            jokes,
+            isFetchingJokes: false
+          });
+        });
+    }
   }
 
   handleSearchChange(e) {
