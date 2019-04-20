@@ -11,16 +11,45 @@ class App extends Component {
     this.state = {
       searchTerm: '',
       jokes: [],
-      isFetchingJokes: false
+      isFetchingJokes: false,
+      isSearch: false
     };
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.randomizeJokes = this.randomizeJokes.bind(this);
+  }
+
+  randomizeJokes() {
+    this.setState({
+      isFetchingJokes: true,
+      isSearch: false
+    });
+
+    fetch(
+      'https://icanhazdadjoke.com',
+      {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json'
+        }
+    })
+      .then(response => response.json())
+      .then(json => {
+        let jokes = json.results;
+        this.setState({
+          jokes,
+          isFetchingJokes: false
+        });
+      });
   }
 
   // Default parameter
-  getJokes(limit = 15) {
-    this.setState({ isFetchingJokes: true });
+  searchJokes(limit = 15) {
+    this.setState({
+      isFetchingJokes: true,
+      isSearch: true
+    });
 
     fetch(
       `https://icanhazdadjoke.com/search?term=${
@@ -34,7 +63,7 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(json => {
-        const jokes = json.results;
+        let jokes = json.results;
         this.setState({
           jokes,
           isFetchingJokes: false
@@ -46,16 +75,22 @@ class App extends Component {
     this.setState({ searchTerm: e.target.value });
   }
 
-  handleSearchSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault();
-    this.getJokes();
+    this.state.isSearch ? this.searchJokes() : this.randomizeJokes();
   }
 
-  renderJokes() {
+  jokeRender() {
     return (
-      <ul>
-        {this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
-      </ul>
+      <div>
+        {this.state.isSearch ?
+          <ul>{this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
+          </ul> :
+          <p>
+            {this.state.jokes[Math.floor(Math.random() * this.state.jokes.length)]}
+          </p>
+        }
+      </div>
     );
   }
 
@@ -63,13 +98,13 @@ class App extends Component {
     return (
       <div>
         <RetrievalForm
-          onFormSubmit={this.handleSearchSubmit}
+          onFormSubmit={this.handleSubmit}
           onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
-          onRandomize={() => this.getJokes(1)}
+          onRandomize={this.randomizeJoke}
         />
 
-        {this.state.isFetchingJokes ? 'Searching for jokes...' : this.renderJokes()}
+        {this.state.isFetchingJokes ? 'Searching for jokes...' : this.jokeRender()}
       </div>
     );
   };
