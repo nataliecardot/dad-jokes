@@ -10,6 +10,7 @@ class App extends Component {
 
     this.state = {
       searchTerm: '',
+      joke: null,
       jokes: [],
       isFetchingJokes: false,
       isSearch: false
@@ -27,7 +28,7 @@ class App extends Component {
     });
 
     fetch(
-      'https://icanhazdadjoke.com',
+      'https://icanhazdadjoke.com/',
       {
         method: 'GET',
         headers: {
@@ -35,10 +36,12 @@ class App extends Component {
         }
     })
       .then(response => response.json())
+      // API returns an object with joke, id, and status
       .then(json => {
-        let jokes = json.results;
+        let joke = json.joke;
+        // TODO: figure out why this works without setting initial state for joke
         this.setState({
-          jokes,
+          joke,
           isFetchingJokes: false
         });
       });
@@ -77,19 +80,17 @@ class App extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // TODO: isSearch is only set to true after searchJokes is called; find solution
     this.state.isSearch ? this.searchJokes() : this.randomizeJokes();
   }
 
   jokeRender() {
     return (
       <div>
+        <p>{this.state.isSearch.toString()}</p>
         {this.state.isSearch ?
           <ul>{this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
-          </ul> :
-          <p>
-            {this.state.jokes[Math.floor(Math.random() * this.state.jokes.length)]}
-          </p>
-        }
+          </ul> : <p>{this.state.joke}</p>}
       </div>
     );
   }
