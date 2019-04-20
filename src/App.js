@@ -1,7 +1,7 @@
 // TODO: Randomize joke
 
 import React, { Component } from 'react';
-import RetrievalForm from './components/retrieval-form';
+import RetrievalForm from './retrieval-form';
 import './App.css';
 
 class App extends Component {
@@ -17,8 +17,8 @@ class App extends Component {
     };
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     this.randomizeJokes = this.randomizeJokes.bind(this);
+    this.searchJokes = this.searchJokes.bind(this);
   }
 
   randomizeJokes() {
@@ -78,11 +78,6 @@ class App extends Component {
     this.setState({ searchTerm: e.target.value });
   }
 
-  handleSearchSubmit(e) {
-    e.preventDefault();
-    this.searchJokes();
-  }
-
   jokeRender() {
     return (
       <div>
@@ -98,7 +93,7 @@ class App extends Component {
     return (
       <div>
         <RetrievalForm
-          onFormSubmit={this.handleSearchSubmit}
+          onSearch={this.searchJokes}
           onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
           onRandomize={this.randomizeJokes}

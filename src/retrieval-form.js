@@ -1,14 +1,14 @@
 import React from 'react';
 
 const RetrievalForm = props => (
-  <form onSubmit = {props.onFormSubmit}>
+  <form>
     <input
       type="text"
       placeholder="Enter search term..."
       onChange={props.onSearchInputChange}
+      required
     />
-    <button disabled={props.isSearching}>Search</button>
-
+    <button onClick={props.onSearch} disabled={props.isSearching}>Search</button>
     <button onClick={props.onRandomize} disabled={props.isSearching}>
       Randomize
     </button>
