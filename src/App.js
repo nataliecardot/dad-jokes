@@ -16,7 +16,7 @@ class App extends Component {
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
-  };
+  }
 
   // Default parameter
   getJokes(limit = 15) {
@@ -38,18 +38,18 @@ class App extends Component {
         this.setState({
           jokes,
           isFetchingJokes: false
-        })
+        });
       });
-  };
+  }
 
   handleSearchChange(e) {
     this.setState({ searchTerm: e.target.value });
-  };
+  }
 
   handleSearchSubmit(e) {
     e.preventDefault();
     this.getJokes();
-  };
+  }
 
   renderJokes() {
     return (
@@ -57,7 +57,7 @@ class App extends Component {
         {this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
       </ul>
     );
-  };
+  }
 
   render() {
     return (
