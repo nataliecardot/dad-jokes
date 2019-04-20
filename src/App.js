@@ -1,7 +1,7 @@
 // TODO: Randomize joke
 
 import React, { Component } from 'react';
-import SearchForm from './components/search-form';
+import RetrievalForm from './components/search-form';
 import './App.css';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
   };
 
   // Default parameter
-  searchJokes(limit = 20) {
+  getJokes(limit = 15) {
     this.setState({ isFetchingJokes: true });
 
     fetch(
@@ -29,7 +29,7 @@ class App extends Component {
       {
         method: 'GET',
         headers: {
-          Accept: 'application/json '
+          Accept: 'application/json'
         }
     })
       .then(response => response.json())
@@ -48,7 +48,7 @@ class App extends Component {
 
   handleSearchSubmit(e) {
     e.preventDefault();
-    this.searchJokes();
+    this.getJokes();
   };
 
   renderJokes() {
@@ -62,11 +62,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchForm
+        <RetrievalForm
           onFormSubmit={this.handleSearchSubmit}
-          onSearchValueChange={this.handleSearchChange}
+          onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
-          onRandomize={() => this.searchJokes(1)}
+          onRandomize={() => this.getJokes(1)}
         />
 
         {this.state.isFetchingJokes ? 'Searching for jokes...' : this.renderJokes()}

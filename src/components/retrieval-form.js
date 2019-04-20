@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SearchForm = props => (
+const RetrievalForm = props => (
   <form onSubmit = {props.onFormSubmit}>
     <input
       type="text"
       placeholder="Enter search term..."
-      onChange={props.onSearchValueChange}
+      onChange={props.onSearchInputChange}
     />
     <button disabled={props.isSearching}>Search</button>
 
@@ -15,4 +15,4 @@ const SearchForm = props => (
   </form>
 );
 
-export default SearchForm;
+export default RetrievalForm;
