@@ -92,7 +92,7 @@ class App extends Component {
     return (
       <div>
         <RetrievalForm
-          onSearch={this.searchJokes}
+          onFormSubmit={this.searchJokes}
           onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
           onRandomize={this.randomizeJokes}
