@@ -1,8 +1,5 @@
-// TODO: Randomize joke
-
 import React, { Component } from 'react';
 import RetrievalForm from './retrieval-form';
-import './App.css';
 
 class App extends Component {
   constructor() {
