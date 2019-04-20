@@ -17,7 +17,7 @@ class App extends Component {
     };
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     this.randomizeJokes = this.randomizeJokes.bind(this);
   }
 
@@ -78,10 +78,9 @@ class App extends Component {
     this.setState({ searchTerm: e.target.value });
   }
 
-  handleSubmit(e) {
+  handleSearchSubmit(e) {
     e.preventDefault();
-    // TODO: isSearch is only set to true after searchJokes is called; find solution
-    this.state.isSearch ? this.searchJokes() : this.randomizeJokes();
+    this.searchJokes();
   }
 
   jokeRender() {
@@ -99,7 +98,7 @@ class App extends Component {
     return (
       <div>
         <RetrievalForm
-          onFormSubmit={this.handleSubmit}
+          onFormSubmit={this.handleSearchSubmit}
           onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
           onRandomize={this.randomizeJokes}
