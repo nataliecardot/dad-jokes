@@ -1,7 +1,7 @@
 // TODO: Randomize joke
 
 import React, { Component } from 'react';
-import RetrievalForm from './components/search-form';
+import RetrievalForm from './components/retrieval-form';
 import './App.css';
 
 class App extends Component {
