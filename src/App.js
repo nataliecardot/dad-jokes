@@ -84,7 +84,6 @@ class App extends Component {
   jokeRender() {
     return (
       <div>
-        <p>{this.state.isSearch.toString()}</p>
         {this.state.isSearch ?
           <ul>{this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
           </ul> : <p>{this.state.joke}</p>}
