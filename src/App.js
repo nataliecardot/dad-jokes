@@ -101,7 +101,7 @@ class App extends Component {
           onFormSubmit={this.handleSubmit}
           onSearchInputChange={this.handleSearchChange}
           isSearching={this.state.isFetchingJokes}
-          onRandomize={this.randomizeJoke}
+          onRandomize={this.randomizeJokes}
         />
 
         {this.state.isFetchingJokes ? 'Searching for jokes...' : this.jokeRender()}
