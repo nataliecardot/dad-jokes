@@ -1,8 +1,6 @@
 import React from 'react';
 
 const RetrievalForm = props => {
-  console.log(props.onFormSubmit);
-
   const onSubmit = e => {
     // Prevents GET request/page refresh on submit
     e.preventDefault();
