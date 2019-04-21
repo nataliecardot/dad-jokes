@@ -13,7 +13,7 @@ class App extends Component {
       isSearch: false
     };
 
-    this.handleSearchChange = this.handleSearchChange.bind(this);
+    this.onSearchChange = this.onSearchChange.bind(this);
     this.randomizeJokes = this.randomizeJokes.bind(this);
     this.searchJokes = this.searchJokes.bind(this);
   }
@@ -33,10 +33,8 @@ class App extends Component {
         }
     })
       .then(response => response.json())
-      // API returns an object with joke, id, and status
       .then(json => {
         let joke = json.joke;
-        // TODO: figure out why this works without setting initial state for joke
         this.setState({
           joke,
           isFetchingJokes: false
@@ -44,7 +42,6 @@ class App extends Component {
       });
   }
 
-  // Default parameter
   searchJokes(limit = 15) {
     // If nothing entered, user gets "Please fill out this field" message due to "required" attribute on input element
     if (this.state.searchTerm !== '') {
@@ -74,7 +71,7 @@ class App extends Component {
     }
   }
 
-  handleSearchChange(e) {
+  onSearchChange(e) {
     this.setState({ searchTerm: e.target.value });
   }
 
@@ -93,7 +90,7 @@ class App extends Component {
       <div>
         <RetrievalForm
           onFormSubmit={this.searchJokes}
-          onSearchInputChange={this.handleSearchChange}
+          onInputChange={this.onSearchChange}
           isSearching={this.state.isFetchingJokes}
           onRandomize={this.randomizeJokes}
         />

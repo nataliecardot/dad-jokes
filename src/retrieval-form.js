@@ -8,18 +8,20 @@ const RetrievalForm = props => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        type="text"
-        placeholder="Enter search term..."
-        onChange={props.onSearchInputChange}
-        required
-      />
-      <button disabled={props.isSearching}>Search</button>
+    <>
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          placeholder="Enter search term..."
+          onChange={props.onInputChange}
+          required
+        />
+        <button disabled={props.isSearching}>Search</button>
+      </form>
       <button onClick={props.onRandomize} disabled={props.isSearching}>
         Randomize
       </button>
-    </form>
+    </>
   );
 };
 
