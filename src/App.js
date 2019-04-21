@@ -71,8 +71,8 @@ class App extends Component {
     }
   }
 
-  onSearchChange(e) {
-    this.setState({ searchTerm: e.target.value });
+  onSearchChange(value) {
+    this.setState({ searchTerm: value });
   }
 
   jokeRender() {
