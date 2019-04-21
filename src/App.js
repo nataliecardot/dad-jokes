@@ -87,7 +87,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <RetrievalForm
           onFormSubmit={this.searchJokes}
           onInputChange={this.onSearchChange}
