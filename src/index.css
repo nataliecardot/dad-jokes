@@ -1,11 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One|Ubuntu');
+
+html {
+  /* Applying so that 1rem will equal 10px for easier calculation; default font-size in browsers is 16px, and 62.5% of 16px is 10px. 0.1rem now equals 1px, 1.6rem = 16px */
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #f1f1f1;
 }
 
 .app {
   text-align: center;
+}
+
+h1 {
+  font-family: 'Leckerli One', cursive;
+  margin: 4rem 0 3rem 0;;
+  font-size: 8rem;
+  cursor: default;
+}
+
+* {
+  outline: none;
+  border: none;
+  /* Incude border and padding in width/height */
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 4rem auto;
+  width: 55%;
+  padding-left: 6rem;
+}
+
+li {
+  display: inline-block;
+  margin-top: 2.5rem;
+  line-height: 1.8;
+  border-left: #2f80de solid 1rem;
+  padding-left: 1.5rem;
+  font-size: 1.7rem;
+}
+
+p, li {
+  letter-spacing: 0.15rem;
+}
+
+p.random-joke {
+  font-size: 2.6rem;
+  width: 55%;
+  margin: 5rem auto;
+  line-height: 1.8;
+}
+
+p.searching-message {
+  font-size: 2.5rem;
+  margin: 5rem auto;
+  font-style: italic;
+  line-height: 1.8;
+  color: #7a7a7a;
+}
+
+input {
+  font-size: 2rem;
+  line-height: 30px;
+  border-radius: 0.5rem;
+  padding: 0 0 0.2rem 2rem;
+  width: 45.75rem;
+  height: 6rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  width: 22rem;
+  height: 5.3rem;
+  margin: 1.5rem 0.9rem 0 0.9rem;
+  line-height: 30px;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+/* Special styling for viewports up to 767px wide */
+@media screen and (max-width: 767px) {
+  ul {
+    width: 90%;
+    padding-left: 0;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  button {
+    width: 45%;
+  }
 }

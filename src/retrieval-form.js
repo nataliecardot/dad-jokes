@@ -16,12 +16,14 @@ const RetrievalForm = props => {
           onChange={event => props.onInputChange(event.target.value)}
           required
         />
-        {/* Specifying type here since it's good practice; different browsers may use default types for buttons */}
-        <button type="submit" disabled={props.isSearching}>Search</button>
-        {/* type="button" stops input validation message from being displayed (on Firefox) when randomize button is clicked without anything entered */}
-        <button type="button" onClick={props.onRandomize} disabled={props.isSearching} className="randomize-button">
-          Randomize
-        </button>
+        <div className="buttons">
+          {/* Specifying type here since it's good practice; different browsers may use default types for buttons */}
+          <button type="submit" disabled={props.isSearching}>Search</button>
+          {/* type="button" stops input validation message from being displayed (on Firefox) when randomize button is clicked without anything entered */}
+          <button type="button" onClick={props.onRandomize} disabled={props.isSearching} className="randomize-button">
+            Randomize
+          </button>
+        </div>
       </form>
     </>
   );

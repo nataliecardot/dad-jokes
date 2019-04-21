@@ -80,7 +80,7 @@ class App extends Component {
       <div>
         {this.state.isSearch ?
           <ul>{this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
-          </ul> : <p>{this.state.joke}</p>}
+          </ul> : <p className="random-joke">{this.state.joke}</p>}
       </div>
     );
   }
@@ -88,6 +88,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <h1>Dad Jokes</h1>
         <RetrievalForm
           onFormSubmit={this.searchJokes}
           onInputChange={this.onSearchChange}
@@ -95,7 +96,7 @@ class App extends Component {
           onRandomize={this.randomizeJokes}
         />
 
-        {this.state.isFetchingJokes ? 'Searching for jokes...' : this.jokeRender()}
+        {this.state.isFetchingJokes ? <p className="searching-message">Searching for jokes...</p> : this.jokeRender()}
       </div>
     );
   };
