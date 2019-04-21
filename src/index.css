@@ -9,14 +9,11 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Ubuntu', sans-serif;
   background-color: #f1f1f1;
-}
-
-.app {
-  text-align: center;
 }
 
 h1 {

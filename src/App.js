@@ -7,7 +7,6 @@ class App extends Component {
 
     this.state = {
       searchTerm: '',
-      joke: null,
       jokes: [],
       isFetchingJokes: false,
       isSearch: false
@@ -87,7 +86,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div>
         <h1>Dad Jokes</h1>
         <RetrievalForm
           onFormSubmit={this.searchJokes}
