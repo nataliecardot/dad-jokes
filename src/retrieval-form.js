@@ -13,7 +13,7 @@ const RetrievalForm = props => {
         <input
           type="text"
           placeholder="Enter search term..."
-          onChange={event => props.onInputChange(event.target.value)}
+          onChange={e => props.onInputChange(e.target.value)}
           required
         />
         <div className="buttons">
