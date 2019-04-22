@@ -36,7 +36,7 @@ class App extends Component {
         let joke = json.joke;
         this.setState({
           joke,
-          isFetchingJokes: false
+          isFetchingJokes: false,
         });
       });
   }
@@ -64,7 +64,8 @@ class App extends Component {
           let jokes = json.results;
           this.setState({
             jokes,
-            isFetchingJokes: false
+            isFetchingJokes: false,
+            searchTerm: ''
           });
         });
     }
@@ -93,6 +94,7 @@ class App extends Component {
           onInputChange={this.onSearchChange}
           isSearching={this.state.isFetchingJokes}
           onRandomize={this.randomizeJokes}
+          searchTerm={this.state.searchTerm}
         />
 
         {this.state.isFetchingJokes ? <p className="searching-message">Searching for jokes...</p> : this.jokeRender()}

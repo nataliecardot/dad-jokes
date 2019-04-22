@@ -15,6 +15,7 @@ const RetrievalForm = props => {
           placeholder="Enter search term..."
           onChange={e => props.onInputChange(e.target.value)}
           required
+          value={props.searchTerm}
         />
         <div>
           {/* Specifying type here since it's good practice; different browsers may use default types for buttons */}
