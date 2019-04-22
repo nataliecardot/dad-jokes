@@ -16,7 +16,7 @@ const RetrievalForm = props => {
           onChange={e => props.onInputChange(e.target.value)}
           required
         />
-        <div className="buttons">
+        <div>
           {/* Specifying type here since it's good practice; different browsers may use default types for buttons */}
           <button type="submit" disabled={props.isSearching}>Search</button>
           {/* type="button" stops input validation message from being displayed (on Firefox) when randomize button is clicked without anything entered */}
