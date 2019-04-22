@@ -41,7 +41,7 @@ class App extends Component {
       });
   }
 
-  searchJokes(limit = 15) {
+  searchJokes() {
     // If nothing entered, user gets "Please fill out this field" message due to "required" attribute on input element
     if (this.state.searchTerm !== '') {
       this.setState({
@@ -50,9 +50,7 @@ class App extends Component {
       });
 
       fetch(
-        `https://icanhazdadjoke.com/search?term=${
-          this.state.searchTerm
-        }&limit=${limit}`,
+        `https://icanhazdadjoke.com/search?term=${this.state.searchTerm}&limit=50`,
         {
           method: 'GET',
           headers: {
