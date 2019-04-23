@@ -1,7 +1,7 @@
 Dad Jokes
 ======
 
-A simple app for retrieving dad jokes, allowing the user to search or get a random joke.
+A simple app for retrieving dad jokes, allowing the user to search for jokes or get a random one.
 
 ### Get Started
 
