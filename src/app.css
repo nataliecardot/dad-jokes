@@ -109,7 +109,7 @@ button:hover {
 /* Special styling for viewports up to 767px wide */
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 
   ul {
