@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RetrievalForm from './retrieval-form';
+import SearchResults from './search-results';
 
 class App extends Component {
   constructor() {
@@ -76,9 +77,12 @@ class App extends Component {
   jokeRender() {
     return (
       <div>
-        {this.state.isSearch ?
-          <ul>{this.state.jokes.map(item => <li key={item.id}>{item.joke}</li>)}
-          </ul> : <p className="random-joke">{this.state.joke}</p>}
+        {(this.state.isSearch && this.state.jokes.length > 0) &&
+          <SearchResults
+            jokes={this.state.jokes}
+          />}
+        {(this.state.isSearch && this.state.jokes.length === 0) && <p className="no-results-msg">Sorry, no results.</p>}
+        {!this.state.isSearch && <p className="random-joke">{this.state.joke}</p>}
       </div>
     );
   }
@@ -95,7 +99,7 @@ class App extends Component {
           searchTerm={this.state.searchTerm}
         />
 
-        {this.state.isFetchingJokes ? <p className="searching-message">Searching for jokes...</p> : this.jokeRender()}
+        {this.state.isFetchingJokes ? <p className="searching-msg">Searching for jokes...</p> : this.jokeRender()}
       </div>
     );
   };
