@@ -7,7 +7,7 @@ A simple app for retrieving dad jokes, allowing the user to search or get a rand
 
 View online at https://nataliecardot.com/dad-jokes/
 
-##### View locally
+### View locally
 1. Clone or download this repository
 2. Using a command line tool, navigate to the directory's location
 3. Run `npm install`, which installs all modules listed as dependencies in `package.json`.
