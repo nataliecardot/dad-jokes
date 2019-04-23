@@ -5,7 +5,7 @@ A simple app for retrieving dad jokes, allowing the user to search or get a rand
 
 ### Get Started
 
-To launch the project:
+View online at https://nataliecardot.com/dad-jokes/
 
 ##### View locally
 1. Clone or download this repository
