@@ -1,5 +1,5 @@
 {
-  "main.css": "/dad-jokes/static/css/main.f1d6caa5.chunk.css",
+  "main.css": "/dad-jokes/static/css/main.1b28c964.chunk.css",
   "main.js": "/dad-jokes/static/js/main.8791a433.chunk.js",
   "main.js.map": "/dad-jokes/static/js/main.8791a433.chunk.js.map",
   "runtime~main.js": "/dad-jokes/static/js/runtime~main.c81b4217.js",
@@ -7,7 +7,7 @@
   "static/js/2.4e81ba5b.chunk.js": "/dad-jokes/static/js/2.4e81ba5b.chunk.js",
   "static/js/2.4e81ba5b.chunk.js.map": "/dad-jokes/static/js/2.4e81ba5b.chunk.js.map",
   "index.html": "/dad-jokes/index.html",
-  "precache-manifest.6c819411631c1ae8e51630d3feb4c1da.js": "/dad-jokes/precache-manifest.6c819411631c1ae8e51630d3feb4c1da.js",
+  "precache-manifest.ed344a68995c033ca224cec6ab36f87b.js": "/dad-jokes/precache-manifest.ed344a68995c033ca224cec6ab36f87b.js",
   "service-worker.js": "/dad-jokes/service-worker.js",
-  "static/css/main.f1d6caa5.chunk.css.map": "/dad-jokes/static/css/main.f1d6caa5.chunk.css.map"
+  "static/css/main.1b28c964.chunk.css.map": "/dad-jokes/static/css/main.1b28c964.chunk.css.map"
 }
