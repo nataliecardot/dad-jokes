@@ -98,13 +98,14 @@ input:focus {
 }
 
 button {
-  background-color: #ddd;
-  font-size: 1.7rem;
+  background-color: #bfbfbf;
+  color: #fff;
+  font-size: 1.9rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
   width: 22rem;
   height: 5.3rem;
-  margin: 1.5rem 0.9rem 0 0.9rem;
+  margin: 2.5rem 0.9rem 0 0.9rem;
   line-height: 30px;
   border-radius: 0.5rem;
   transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
