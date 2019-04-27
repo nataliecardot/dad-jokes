@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/dad-jokes/static/js/2.4e81ba5b.chunk.js"
   },
   {
-    "revision": "f3f26b327a8ab5ac3117f1f8ca4356cd",
+    "revision": "b7c3c056052e2137efdf83276541097c",
     "url": "/dad-jokes/index.html"
   }
 ];
