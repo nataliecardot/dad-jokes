@@ -11,6 +11,7 @@ const RetrievalForm = props => {
     <>
       <form onSubmit={onSubmit}>
         <input
+          autoFocus
           type="text"
           placeholder="Enter search term..."
           onChange={e => props.onInputChange(e.target.value)}
