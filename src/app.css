@@ -33,19 +33,29 @@ h1 {
 ul {
   list-style-type: none;
   text-align: left;
-  margin: 4rem auto;
+  margin: 4rem auto 5rem auto;
   width: 55%;
   padding-left: 6rem;
 }
 
 li {
   display: inline-block;
-  margin-top: 2.5rem;
-  line-height: 1.8;
-  border-left: #2f80de solid 1rem;
-  padding-left: 1.5rem;
+  margin-top: 3.5rem;
+  line-height: 3;
+  border-left: #2f80de solid 1.3rem;
+  width: 100%;
+  background-color: #cddef2;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   font-size: 1.7rem;
 }
+
+li:nth-child(even) {
+  text-align: right;
+  border-right: #cf2b2b solid 1.3rem;
+  border-left: none;
+  background-color: #f5b4b4;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}​
 
 p, li {
   letter-spacing: 0.15rem;
