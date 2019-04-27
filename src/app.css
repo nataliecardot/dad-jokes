@@ -54,7 +54,6 @@ li:nth-child(even) {
   border-right: #cf2b2b solid 1.3rem;
   border-left: none;
   background-color: #f5b4b4;
-  padding: 1.5rem 3rem 1.5rem 3rem;
 }​
 
 p, li {
@@ -125,6 +124,12 @@ button:hover {
   ul {
     width: 90%;
     padding-left: 0;
+    margin: 1.5rem auto 3rem auto;
+  }
+
+  li {
+    line-height: 2;
+    padding: 1.5rem 2.3rem 1.5rem 2.3rem;
   }
 
   p.random-joke {
@@ -137,6 +142,8 @@ button:hover {
   }
 
   button {
-    width: 90%;
+    width: 42.5%;
+    margin-top: 2.5rem;
+    height: 6rem;
   }
 }
