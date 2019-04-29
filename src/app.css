@@ -34,8 +34,8 @@ ul {
   list-style-type: none;
   text-align: left;
   margin: 4rem auto 5rem auto;
-  width: 55%;
-  padding-left: 6rem;
+  width: 50%;
+  padding-left: 0;
 }
 
 li {
