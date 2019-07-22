@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dad-jokes/precache-manifest.d66b9c48e2c9e26934f8a516e66a49b8.js"
+  "/dad-jokes/precache-manifest.09cc01e4ed29a5fa25b97d46a2ba2039.js"
 );
 
 workbox.clientsClaim();

@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b424fed633ca97949aeb",
-    "url": "/dad-jokes/static/css/main.dff3fbff.chunk.css"
+    "revision": "e527217566a422a68aec",
+    "url": "/dad-jokes/static/css/main.18c18ebb.chunk.css"
   },
   {
-    "revision": "b424fed633ca97949aeb",
+    "revision": "e527217566a422a68aec",
     "url": "/dad-jokes/static/js/main.6d41fa9d.chunk.js"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/dad-jokes/static/js/2.4e81ba5b.chunk.js"
   },
   {
-    "revision": "e47109c1612bec535aedded7a9e7eced",
+    "revision": "c2139a9e6716fa4cd54e99b17d52c5a9",
     "url": "/dad-jokes/index.html"
   }
 ];
