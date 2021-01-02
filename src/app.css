@@ -18,7 +18,7 @@ body {
 
 h1 {
   font-family: 'Leckerli One', cursive;
-  margin: 4rem 0 3rem 0;;
+  margin: 4rem 0 3rem 0;
   font-size: 8rem;
   cursor: default;
 }
@@ -54,9 +54,9 @@ li:nth-child(even) {
   border-right: #cf2b2b solid 1.3rem;
   border-left: none;
   background-color: #f5b4b4;
-}​
-
-p, li {
+}
+​ p,
+li {
   letter-spacing: 0.15rem;
 }
 
@@ -98,7 +98,7 @@ input:focus {
 }
 
 button {
-  background-color: #999999;
+  background-color: #3b3b3b;
   color: #fff;
   font-size: 1.9rem;
   letter-spacing: 0.2rem;
